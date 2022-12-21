@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8806de2f71.js" crossorigin="8806de2f71"></script>
+    <title>Contact</title>
+
+    <script language="javascript">
+        function tester()
+        {
+            var msg="";
+            
+            if(document.f1.name.value.length<3)
+            msg+="Saisir un Nom correcte\n";
+
+            if(isNaN(document.f1.name.value)==false)
+            msg+="Saisir un Nom alphabetique\n";
+            
+            if(document.f1.email.value.indexOf('@')==-1 || document.f1.email.value.indexOf('.')==-1)
+            msg+="Entrer un email valide\n";
+            
+            if(isNaN(document.f1.number.value)==true)
+            msg+="Tel incorrect\n";
+            
+            if(document.f1.number.value.length<8)
+            msg+="Tel incorrect\n";
+
+            if(document.f1.sujet.value.length<3)
+            msg+="Ecrire un Sujet\n";
+
+            if(isNaN(document.f1.sujet.value)==false)
+            msg+="Ecrire un Sujet alphabetique\n";
+
+            if(document.f1.message.value.length<5)
+            msg+="Ecrire un Message\n";
+            
+            if(msg!="")
+            alert(msg);
+            
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <nav>
+        <a href="accueil.html">Accueil</a>
+        <a href="accueil.html#propos">A Propos</a>
+        <a href="accueil.html#services">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="top">
+        <div class="left">
+            <h2>Contactez Nous</h2>
+        </div>
+        <div class="right">
+            <h2>PIXEL CODE</h2>
+        </div>
+    </div>
+
+    <div class="contact">
+        <h2>CONTACTEZ PIXEL CODE</h2>
+        <p>Pixel Code met en œuvre ses compétences pour vous proposer, à chaque stade du développement de votre site, de nouveaux concepts et des solutions optimales capables de valoriser vos projets en combinant design original, qualité graphique et efficacité du développement.</p>
+    </div>
+
+    <div class="container">
+        <div class="tel">
+            <i class="fa-solid fa-phone"></i>
+            <h3>Telephone</h3>
+            <p>Tél: (+216) 53 631 796</p>
+        </div>
+        <div class="adresse">
+            <i class="fa-solid fa-location-arrow"></i>
+            <h3>Adresse</h3>
+            <p>Avenue Habib Borguiba <br>
+                Kalaa Essghira 4021<br>
+                Sousse Tunisie</p>
+        </div>
+        <div class="email">
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Email</h3>
+            <p>contact@pixelcode.tn</p>
+        </div>
+        <div class="facebook">
+            <a href="https://www.facebook.com/pixelcode.tn" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <h3>Facebook</h3>
+            <p>PixelCode</p>
+        </div>
+        <div class="linkedin">
+            <a href="https://www.linkedin.com/company/pixelcodetn/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <h3>LinkedIn</h3>
+            <p>PixelCode</p>
+        </div>
+    </div>
+
+    <div class="forum">
+        <form name="f1" action="contact.php" method="post">
+            <table>
+                <tr><td><input type="text" name="name" id="" placeholder="Name" required></td></tr>
+                <tr><td><input type="email" name="email" id="" placeholder="Email" required ></td></tr>
+                <tr><td><input type="text" name="number" id="" maxlength="8" placeholder="Phone number" required ></td></tr>
+                <tr><td><input type="text" name="sujet" id="" placeholder="Sujet" required ></td></tr>
+                <tr><td><textarea name="message" placeholder="Message" id="" required ></textarea></td></tr>
+                <tr><td><input class="button" type="submit" name="envoyer" id="" value="Envoyer" onclick="tester()"></td></tr> 
+        </table>
+    </form>
+    </div>   
+</body>
+</html>
